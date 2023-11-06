@@ -181,8 +181,7 @@ class Blocks(GameInfo):
                 if block in all_blocks:
                     return True
                 continue
-                    
-                    
+                               
             block = block[0], block[1] + self.block_hight
             if block in all_blocks or (block[0], block[1] - self.block_hight) in all_blocks or block[1] == self.middle_rect.bottom:
                 collide = True
@@ -231,7 +230,6 @@ class Player:
         with open('records.json', 'r') as records:
             data = json.load(records)
             return data
-
 
 
 def draw_surfaces(game):
@@ -287,7 +285,6 @@ def draw_next_text(game):
     y = game.board_matrix[len(game.board_matrix) // 2][0][1] - (game.right_rect.bottom // 2) // 2
     print(x, y)
     game.screen.blit(next_text, (x, y))
-
 
 
 def is_between_walls(game, shape):
@@ -460,7 +457,6 @@ def main():
                         remove_and_drop(game, winning_line)
 
             frame = 0
-
 
 
 if __name__ == '__main__':
